@@ -1,0 +1,34 @@
+include: '.gitlab-ci/node.yml'
+
+variables:
+  GIT_STRATEGY: fetch
+  GIT_CLEAN_FLAGS: -ffdx -e node_modules/ -e .npm/ -e .yarn/
+
+dev:
+  extends: .yarn # or .npm
+  stage: deploy
+  only:
+    - dev
+  script:
+    - rm -f .env && ln -s .gitlab-ci/dev.env .env
+    - rm -f ecosystem.config.js && ln -s .gitlab-ci/dev.ecosystem.config.js ecosystem.config.js
+    - bash .gitlab-ci/dev.script.sh
+  after_script:
+    - pm2 restart ecosystem.config.js
+  tags:
+    - ns1.optimap.id-dev01-ssh
+
+deploy_vercel:
+  image: node:18.6.0-slim
+  variables:
+    VERCEL_PROJECT: dapobud-landing-page
+    VERCEL_TOKEN: pKHtt6UJjyHKAeUGCwMwtcTK
+  stage: deploy
+  only:
+    - preview
+  script:
+    - npm install --global vercel
+    - vercel link --token=$VERCEL_TOKEN --project=$VERCEL_PROJECT --yes
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --token=$VERCEL_TOKEN
+    - vercel deploy --token=$VERCEL_TOKEN --prod
