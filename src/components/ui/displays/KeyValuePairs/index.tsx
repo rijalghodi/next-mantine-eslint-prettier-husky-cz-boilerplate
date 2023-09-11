@@ -12,7 +12,7 @@ import { KeyValuePairsSkeleton } from '@/components/ui';
 
 import { capitalizeFirstLetter } from '@/utils';
 
-export type KeyValue = {
+export type TKeyValue = {
   key: string;
   value?: string | number | JSX.Element;
   valueTextTransform?:
@@ -22,17 +22,17 @@ export type KeyValue = {
     | 'capitalize-first';
 };
 
-interface Props {
+type TProps = {
   fetching?: boolean;
   keySpan?: ColSpan | undefined;
   horizontalSpacing?: MantineNumberSize;
   verticalSpacing?: MantineNumberSize;
   justify?: 'each-left' | 'tight' | 'apart' | 'each-left' | 'each-right';
-  data: KeyValue[];
+  data: TKeyValue[];
   keyTextProps?: TextProps;
   valueTextProps?: TextProps;
-}
-export function KeyValuePairs(props: Props) {
+};
+export function KeyValuePairs(props: TProps) {
   if (props.fetching) {
     return <KeyValuePairsSkeleton />;
   }

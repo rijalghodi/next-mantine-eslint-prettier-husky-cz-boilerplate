@@ -3,22 +3,22 @@ import React from 'react';
 
 import {
   Filters,
-  FiltersProps,
   SearchBar,
-  SearchBarProps,
+  TFiltersProps,
+  TSearchBarProps,
 } from '@/components/ui';
 
-import { DefaultTable, IDefaultTableProps } from '../DefaultTable';
+import { DefaultTable, TDefaultTableProps } from '../DefaultTable';
 
-export type BookProps<T> = IDefaultTableProps<T> & {
+export type TBookProps<T> = TDefaultTableProps<T> & {
   loading?: boolean;
   error?: boolean;
   gutter?: MantineSize;
-  searchBarProps?: SearchBarProps;
-  filtersProps?: FiltersProps;
+  searchBarProps?: TSearchBarProps;
+  filtersProps?: TFiltersProps;
 };
 
-export function Book<T>(props: BookProps<T>) {
+export function Book<T>(props: TBookProps<T>) {
   const {
     loading,
     searchBarProps,

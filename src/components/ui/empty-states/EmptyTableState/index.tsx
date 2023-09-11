@@ -3,17 +3,17 @@ import React from 'react';
 
 import LaptopMan from '~/images/illustrations/laptop-man.svg';
 
-interface IResetButtonProps extends ButtonProps {
+interface TResetButtonProps extends ButtonProps {
   label?: string;
   onClick?: () => void;
 }
 
-export interface IEmptyTableStateProps {
+export interface TEmptyTableStateProps {
   title?: string;
   message?: string;
-  resetButtonProps?: IResetButtonProps;
+  resetButtonProps?: TResetButtonProps;
 }
-export function EmptyTableState(props: IEmptyTableStateProps) {
+export function EmptyTableState(props: TEmptyTableStateProps) {
   return (
     <Stack align="center" spacing="lg" p="sm" pt="0px" pb="lg">
       <LaptopMan />

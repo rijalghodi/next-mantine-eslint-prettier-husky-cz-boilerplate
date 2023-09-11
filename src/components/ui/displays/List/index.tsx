@@ -1,12 +1,12 @@
 import { List as MantineList, ListItemProps, ListProps } from '@mantine/core';
 import React from 'react';
 
-type Props = Omit<ListProps, 'children'> & {
+type TProps = Omit<ListProps, 'children'> & {
   data: (string | React.ReactNode)[];
   listItemProps?: Omit<ListItemProps, 'children'>;
 };
 
-export function List(props: Props) {
+export function List(props: TProps) {
   const { data, listItemProps, ...rest } = props;
   return (
     <MantineList {...rest}>

@@ -8,7 +8,7 @@ import {
 } from '@mantine/core';
 import React from 'react';
 
-type Props = {
+type TProps = {
   title: string | React.ReactNode;
   children: React.ReactNode;
   titleOrder: TitleOrder;
@@ -18,7 +18,7 @@ type Props = {
   rootProps?: BoxProps;
 };
 
-export function TitleWrapper(props: Props) {
+export function TitleWrapper(props: TProps) {
   return (
     <Box {...props.rootProps}>
       <Title

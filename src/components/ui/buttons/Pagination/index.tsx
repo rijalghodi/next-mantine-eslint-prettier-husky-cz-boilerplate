@@ -8,19 +8,19 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
 
-export type PageSizeValue = 10 | 20 | 30;
+export type TPageSizeValue = 10 | 20 | 30;
 
-export type PaginationProps = {
+export type TPaginationProps = {
   currentPage?: number;
   totalPage?: number;
   totalAllData?: number;
   totalData?: number;
-  pageSize?: PageSizeValue;
+  pageSize?: TPageSizeValue;
   setPage?: (page: number) => void;
-  setTotalData?: (pageSize: PageSizeValue) => void;
+  setTotalData?: (pageSize: TPageSizeValue) => void;
 };
 
-export function Pagination(props: PaginationProps) {
+export function Pagination(props: TPaginationProps) {
   const largeScreen = useMediaQuery(`(min-width: 77.5em`);
   const smallScreen = useMediaQuery(`(min-width: 52em`);
 
@@ -95,7 +95,7 @@ export function Pagination(props: PaginationProps) {
             </Text>
             <Select
               onChange={(v) => {
-                props.setTotalData?.(parseInt(v ?? '10', 10) as PageSizeValue);
+                props.setTotalData?.(parseInt(v ?? '10', 10) as TPageSizeValue);
               }}
               value={String(props.pageSize)}
               data={['10', '20', '30']}

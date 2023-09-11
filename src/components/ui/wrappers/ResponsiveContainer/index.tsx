@@ -1,9 +1,9 @@
 import { Stack, StackProps } from '@mantine/core';
 import React from 'react';
 
-type Props = StackProps;
+type TProps = StackProps;
 
-export function ResponsiveContainer(props: Props) {
+export function ResponsiveContainer(props: TProps) {
   return (
     <Stack
       sx={(theme) => ({

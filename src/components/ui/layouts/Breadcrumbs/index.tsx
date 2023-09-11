@@ -12,13 +12,13 @@ import React from 'react';
 
 import { useStyles } from './styles';
 
-export type IBreadcrumb = {
+export type TBreadcrumb = {
   title: string;
   link: string;
 };
 
 type Props = BoxProps & {
-  data: IBreadcrumb[];
+  data: TBreadcrumb[];
 };
 
 export function Breadcrumbs(props: Props) {

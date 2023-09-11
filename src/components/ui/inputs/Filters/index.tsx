@@ -11,20 +11,20 @@ import {
 import { IconFilter } from '@tabler/icons-react';
 import React from 'react';
 
-export type IFilter = {
+export type TFilter = {
   component: React.ReactNode;
   col?: ColProps;
 };
 
-export type FiltersProps = {
-  filters?: IFilter[];
+export type TFiltersProps = {
+  filters?: TFilter[];
   gutter?: MantineSize;
   initialExpanded?: boolean;
   alwaysExpanded?: boolean;
   hideFilterIcon?: boolean;
 };
 
-export function Filters(props: FiltersProps) {
+export function Filters(props: TFiltersProps) {
   const [expanded, setExpanded] = React.useState(props.initialExpanded);
   return (
     <Stack spacing={props.gutter ?? '1em'}>

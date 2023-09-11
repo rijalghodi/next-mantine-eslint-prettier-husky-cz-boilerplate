@@ -1,2 +1,2 @@
-export * from './ResponsiveBoxWrapper';
+export * from './ResponsiveContainer';
 export * from './TitleWrapper';

@@ -6,21 +6,21 @@ import {
   EmptyTableState,
   IEmptyTableStateProps,
   Pagination,
-  PaginationProps,
   TableSkeleton,
+  TPaginationProps,
 } from '@/components/ui';
 
 import { useStyles } from './DefaultTable.styles';
 
-export type IDefaultTableProps<T> = DataTableProps<T> & {
+export type TDefaultTableProps<T> = DataTableProps<T> & {
   minWidth?: number | string;
   sameWidthColumns?: boolean;
-  paginationProps?: PaginationProps;
+  paginationProps?: TPaginationProps;
   emptyTableStateProps?: IEmptyTableStateProps;
   skeletonRowNumber?: number;
 };
 
-export function DefaultTable<T>(props: IDefaultTableProps<T>) {
+export function DefaultTable<T>(props: TDefaultTableProps<T>) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
   const {

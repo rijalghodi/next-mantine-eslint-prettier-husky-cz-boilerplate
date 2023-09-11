@@ -1,12 +1,12 @@
 import { Text, TextProps } from '@mantine/core';
 import React from 'react';
 
-type Props = TextProps & {
+type TProps = TextProps & {
   href: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
 };
 
-export function Link(props: Props) {
+export function Link(props: TProps) {
   const { href, target, ...rest } = props;
   return (
     <Text

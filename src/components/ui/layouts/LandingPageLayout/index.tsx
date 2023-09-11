@@ -3,13 +3,13 @@ import { IconChevronLeft } from '@tabler/icons-react';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { Breadcrumbs, Footer, Header, IBreadcrumb } from '@/components/ui';
+import { Breadcrumbs, Footer, Header, TBreadcrumb } from '@/components/ui';
 
 import { useStyles } from './LandingPageLayout.style';
 
 type Props = {
   children: React.ReactNode;
-  breadcrumbs?: IBreadcrumb[];
+  breadcrumbs?: TBreadcrumb[];
   enableBack?: boolean;
 };
 

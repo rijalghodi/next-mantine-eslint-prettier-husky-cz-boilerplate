@@ -1,6 +1,7 @@
+import { Title } from '@mantine/core';
+
 import { LandingPageLayout, ResponsiveContainer } from '@/components/ui';
 import { Jumbotron } from '@/components/ui/displays';
-import { Title } from '@mantine/core';
 
 export default function Home() {
   return (

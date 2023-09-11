@@ -3,11 +3,11 @@ import { useMediaQuery } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import React from 'react';
 
-export type SearchBarProps = TextInputProps & {
+export type TSearchBarProps = TextInputProps & {
   onSearch?: () => void;
 };
 
-export function SearchBar(props: SearchBarProps) {
+export function SearchBar(props: TSearchBarProps) {
   const { onSearch, styles, value, ...rest } = props;
   const xSmallScreen = useMediaQuery('(max-width: 576px)');
   return (

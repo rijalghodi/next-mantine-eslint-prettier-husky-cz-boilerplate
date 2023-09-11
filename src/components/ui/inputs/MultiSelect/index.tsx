@@ -4,11 +4,11 @@ import {
 } from '@mantine/core';
 import React from 'react';
 
-export type MultiSelectProps = MantineMultiSelectProps & {
+export type TMultiSelectProps = MantineMultiSelectProps & {
   fullWidth?: boolean;
 };
 
-export function MultiSelect(props: MultiSelectProps) {
+export function MultiSelect(props: TMultiSelectProps) {
   const { styles, ...rest } = props;
   return (
     <MantineMultiSelect

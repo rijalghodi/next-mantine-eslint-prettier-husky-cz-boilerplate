@@ -4,13 +4,13 @@ import React from 'react';
 import { useStyles } from './Jumbotron.styles';
 import { ResponsiveContainer } from '../../wrappers';
 
-type Props = {
+type TProps = {
   text: string | React.ReactNode;
   notTitle?: boolean;
   order?: TitleOrder;
 };
 
-export function Jumbotron(props: Props) {
+export function Jumbotron(props: TProps) {
   const { classes } = useStyles();
   return (
     <Center

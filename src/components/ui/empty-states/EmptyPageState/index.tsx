@@ -1,12 +1,12 @@
 import { Box, Button, Center, Image, Stack, Text } from '@mantine/core';
 import React from 'react';
 
-export interface IEmptyPageStateProps {
+export interface TEmptyPageStateProps {
   title?: string;
   message?: string;
   disableGoHome?: boolean;
 }
-export function EmptyPageState(props: IEmptyPageStateProps) {
+export function EmptyPageState(props: TEmptyPageStateProps) {
   return (
     <Center h="100%">
       <Stack align="center" spacing="lg" p="sm" w="100%">
