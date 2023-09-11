@@ -38,3 +38,5 @@ yarn-error.log*
 .unlighthouse
 .prettierrc.js
 next-env.d.ts
+
+README.md

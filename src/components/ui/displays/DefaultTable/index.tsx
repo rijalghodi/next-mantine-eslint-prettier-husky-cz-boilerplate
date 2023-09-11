@@ -4,9 +4,9 @@ import React from 'react';
 
 import {
   EmptyTableState,
-  IEmptyTableStateProps,
   Pagination,
   TableSkeleton,
+  TEmptyTableStateProps,
   TPaginationProps,
 } from '@/components/ui';
 
@@ -16,7 +16,7 @@ export type TDefaultTableProps<T> = DataTableProps<T> & {
   minWidth?: number | string;
   sameWidthColumns?: boolean;
   paginationProps?: TPaginationProps;
-  emptyTableStateProps?: IEmptyTableStateProps;
+  emptyTableStateProps?: TEmptyTableStateProps;
   skeletonRowNumber?: number;
 };
 

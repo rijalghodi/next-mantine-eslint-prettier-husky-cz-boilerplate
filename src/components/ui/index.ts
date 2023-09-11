@@ -5,6 +5,5 @@ export * from './inputs';
 export * from './layouts';
 export * from './miscellaneous';
 export * from './skeletons';
-export * from './slices';
 export * from './typography';
 export * from './wrappers';

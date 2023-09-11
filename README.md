@@ -11,9 +11,14 @@
 
 .
 └── src/
-└── components/
-├── ui = reusable static components, like buttons.
-└── features = container components, fetchings, etc.
+    ├── types
+    ├── data
+    ├── pages
+    ├── utils
+    ├── styles
+    └── components/
+        ├── ui = reusable static components, like buttons.
+        └── features = container components, fetchings, etc.
 
 ## Development and Deployment
 
