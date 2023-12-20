@@ -9,6 +9,7 @@
 
 ## SRC Files Hierarcy
 
+```
 .
 └── src/
     ├── types
@@ -19,6 +20,7 @@
     └── components/
         ├── ui = reusable static components, like buttons.
         └── features = container components, fetchings, etc.
+```
 
 ## Development and Deployment
 
